@@ -1,0 +1,4 @@
+order   type    result
+1	A	True
+2	B	False
+3	C	Ok
