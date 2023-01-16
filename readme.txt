@@ -40,11 +40,6 @@ https://wikidocs.net/book/837
 https://wikidocs.net/book/2965
 https://wikidocs.net/book/2165
 
-[[Python Book]]
-만들면서 배우는 파이썬과 40개의 작품들
-http://answerbook.co.kr/
-http://www.yes24.com/Product/Goods/107490270
-
 --------------------------------------------------------------------------------
 
 --- Python Framework & Library ---
@@ -63,3 +58,8 @@ https://docs.scrapy.org/en/latest/index.html
 
 -----------------------------------------------------------------------------------------------
 
+[[Python Book]]
+
+1.만들면서 배우는 파이썬과 40개의 작품들
+http://answerbook.co.kr/
+http://www.yes24.com/Product/Goods/107490270
