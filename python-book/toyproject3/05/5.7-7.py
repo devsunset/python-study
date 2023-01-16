@@ -1,8 +1,0 @@
-﻿f = open('test.txt', 'r+')
-contents = f.read()
-print(contents)
-f.write('문자열 추가 테스트\n')
-f.seek(0)
-contents = f.read()
-print(contents)
-f.close()
