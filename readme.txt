@@ -60,6 +60,10 @@ https://docs.scrapy.org/en/latest/index.html
 
 [[Python Book]]
 
-1.만들면서 배우는 파이썬과 40개의 작품들
+1.만들면서 배우는 파이썬과 40개의 작품들 - toyproject1
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/107490270
+
+2.일잘러의 비밀, 엑셀 대신 파이썬으로 업무 자동화하기 - toyproject2
+http://answerbook.co.kr/
+http://www.yes24.com/Product/Goods/109003861
