@@ -14,9 +14,10 @@ def un_zip(passwd_string, min_len, max_len, zFile):
             except:
                 pass
 
-passwd_string = "012345789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+# passwd_string = "012345789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+passwd_string = "012345789"
 
-zFile = zipfile.ZipFile(r'6. 압축파일 암호푸는 프로그램\암호1234.zip')
+zFile = zipfile.ZipFile('암호1234.zip')
 
 min_len = 1
 max_len = 5
