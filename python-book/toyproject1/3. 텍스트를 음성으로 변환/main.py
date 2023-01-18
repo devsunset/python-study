@@ -15,5 +15,4 @@ tts = gTTS(text=read_file, lang='ko')
 
 tts.save("readme.mp3")
 
-# error check
 playsound("readme.mp3")
