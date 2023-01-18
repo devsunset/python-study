@@ -1,6 +1,7 @@
 import threading
 import time
 
+# 메인코드가 동작할 때에만 쓰레드 동작
 def thread_1():
     while True:
         print("쓰레드1 동작")

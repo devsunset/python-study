@@ -1,5 +1,6 @@
 import threading
 
+# 다수의 쓰레드를 동작
 def sum(name, value):
     for i in range(0, value):
         print(f"{name} : {i}")

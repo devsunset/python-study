@@ -1,6 +1,7 @@
 import threading
 import time
 
+# 2가지 동작이 동시에 실행
 def thread_1():
     while True:
         print("쓰레드1 동작")
