@@ -1,5 +1,7 @@
-import pyautogui
 import time
+# pip install pyautogui
+import pyautogui
+# pip install pyperclip
 import pyperclip
 
 # 검색 엔진 에서 검색 후 결과를 캡쳐 하는 처리
