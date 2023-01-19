@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 # 엑셀파일에서 이메일 주소 읽어와 메일 보내기
+# 네이버/구글 일 1000건 이상시 제한됨 주의
 
 load_wb = load_workbook("이메일주소.xlsx", data_only=True)
 load_ws =load_wb.active
