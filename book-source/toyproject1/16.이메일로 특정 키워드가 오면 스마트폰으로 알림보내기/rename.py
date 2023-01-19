@@ -51,6 +51,25 @@ while True:
             email_date = str(email_message['Date'])
             subject, encode = find_encoding_info(email_message['Subject'])
             subject_str = str(subject)
+
+            # print('=' * 70)
+            # print('FROM:', email_message['From'])
+            # print('SENDER:', email_message['Sender'])
+            # print('TO:', email_message['To'])
+            # print('DATE:', email_message['Date'])
+            # subject, encode = find_encoding_info(email_message['Subject'])
+            # print('SUBJECT:', subject)
+            #
+            # print('[CONTENT]')
+            # message = ''
+            # if email_message.is_multipart():
+            #     for part in email_message.get_payload():
+            #         if part.get_content_type() == 'text/plain':
+            #             bytes = part.get_payload(decode=True)
+            #             encode = part.get_content_charset()
+            #             message = message + str(bytes, encode)
+            # print(message)
+            # print('=' * 70)
             
             if subject_str.find("정산") >= 0:
                 slack_send_message =  email_from + '\n' + email_date + '\n' + subject_str
