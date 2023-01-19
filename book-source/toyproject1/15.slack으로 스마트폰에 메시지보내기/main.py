@@ -1,7 +1,8 @@
 import requests
 import json
 
-slack_webhook_url = "https://hooks.slack.com/services/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"
+
+slack_webhook_url = "https://hooks.slack.com/services/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"
 
 def sendSlackWebhook(strText):
     headers = {
@@ -19,4 +20,4 @@ def sendSlackWebhook(strText):
     else:
         return "error"
 
-print(sendSlackWebhook("안녕하세요 파이썬에서 보내는 메시지 입니다."))
+print(sendSlackWebhook("Hello World"))
