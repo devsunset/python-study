@@ -1,10 +1,12 @@
 import smtplib
 from email.mime.text import MIMEText
 
-send_email = "munjjac@gmail.com"
-send_pwd = "xcxxkcurqfzertmt"
+# 구굴 메일 보내기 (IMAP/SMTP 설정 필요)
 
-recv_email = "munjjac@hanmail.net"
+send_email = "구글계정 메일주속"
+send_pwd = "구글계정에서 앱비밀번호생성"
+
+recv_email = "받는메일주소"
 
 smtp_name = "smtp.gmail.com"
 smtp_port = 587

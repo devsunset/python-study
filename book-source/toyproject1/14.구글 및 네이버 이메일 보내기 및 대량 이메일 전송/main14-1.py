@@ -1,8 +1,10 @@
 import smtplib
 from email.mime.text import MIMEText
 
-send_email = "보내는메일주소"
-send_pwd = "네이버비밀번호"
+# 네이버 메일 보내기 (IMAP/SMTP 설정 필요)
+
+send_email = "네이버계정 메일주소"
+send_pwd = "네이버 비밀번호"
 
 recv_email = "받는메일주소"
 

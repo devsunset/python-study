@@ -2,8 +2,10 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-send_email = "보내는메일주소"
-send_pwd = "비밀번호"
+# HTML 형식으로 보내는 메일
+
+send_email = "네이버계정 메일주소"
+send_pwd = "네이버 비밀번호"
 
 recv_email = "받는메일주소"
 

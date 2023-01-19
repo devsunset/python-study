@@ -1,10 +1,12 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication 
+from email.mime.application import MIMEApplication
 
-send_email = "보내는메일주소"
-send_pwd = "비밀번호"
+# 첨부 파일 포함 메일 보내기
+
+send_email = "구글계정 메일주속"
+send_pwd = "구글계정에서 앱비밀번호생성"
 
 recv_email = "받는메일주소"
 
@@ -24,7 +26,7 @@ text = """
 contentPart = MIMEText(text) 
 msg.attach(contentPart) 
 
-etc_file_path = r'14.구글 및 네이버 이메일 보내기 및 대량 이메일 전송\첨부파일.txt'
+etc_file_path = '첨부파일.txt'
 with open(etc_file_path, 'rb') as f : 
     etc_part = MIMEApplication( f.read() )
     etc_part.add_header('Content-Disposition','attachment', filename="첨부파일.txt")
