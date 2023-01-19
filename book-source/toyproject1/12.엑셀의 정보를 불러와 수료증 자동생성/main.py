@@ -1,11 +1,21 @@
+# pip install openpyxl
+# pip install python-docx
+# pip install docx2pdf
 from docx import Document
 from openpyxl import load_workbook
 import docx
 from docx.oxml.ns import qn
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx2pdf import convert
+import pandas as pd
 
-load_wb = load_workbook(r"12.엑셀의 정보를 불러와 수료증 자동생성\수료증명단.xlsx")
+df = pd.DataFrame([["홍길동", "1990.01.02", "2021-0001"],
+                    ["김철수", "2000.08.08", "2021-0003"]])
+
+print(df)
+df.to_excel('수료증명단.xlsx', index=False, header=False)
+
+load_wb = load_workbook("수료증명단.xlsx")
 load_ws =load_wb.active
 
 name_list = []
@@ -21,7 +31,7 @@ print(birthday_list)
 print(ho_list)
 
 for i in range(len(name_list)):
-    doc = docx.Document(r'12.엑셀의 정보를 불러와 수료증 자동생성\수료증양식.docx')
+    doc = docx.Document('수료증양식.docx')
     style = doc.styles['Normal']
     style.font.name = '나눔고딕'
     style._element.rPr.rFonts.set(qn('w:eastAsia'), '나눔고딕')
@@ -41,7 +51,7 @@ for i in range(len(name_list)):
     run.bold = True
     run._element.rPr.rFonts.set(qn('w:eastAsia'), '나눔고딕')
     run.font.size = docx.shared.Pt(40)
-    para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    para.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
     para = doc.add_paragraph()
     run = para.add_run('\n\n')
@@ -79,7 +89,7 @@ for i in range(len(name_list)):
     run.font.name = '나눔고딕'
     run._element.rPr.rFonts.set(qn('w:eastAsia'), '나눔고딕')
     run.font.size = docx.shared.Pt(20)
-    para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    para.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
     para = doc.add_paragraph()
     run = para.add_run('\n\n\n')
@@ -88,8 +98,7 @@ for i in range(len(name_list)):
     run.bold = True
     run._element.rPr.rFonts.set(qn('w:eastAsia'), '나눔고딕')
     run.font.size = docx.shared.Pt(20)
-    para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    para.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
-    doc.save('12.엑셀의 정보를 불러와 수료증 자동생성\\'+name_list[i]+'.docx')
-    convert('12.엑셀의 정보를 불러와 수료증 자동생성\\'+name_list[i]+'.docx',
-            '12.엑셀의 정보를 불러와 수료증 자동생성\\'+name_list[i]+'.pdf')
+    doc.save(name_list[i]+'.docx')
+    convert(name_list[i]+'.docx', name_list[i]+'.pdf')
