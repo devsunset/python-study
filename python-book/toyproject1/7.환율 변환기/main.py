@@ -6,8 +6,12 @@ from bs4 import BeautifulSoup
 cc = CurrencyConverter()
 print(cc.currencies)
 
+print("=====================================")
+
 cc = CurrencyConverter('http://www.ecb.europa.eu/stats/eurofxref/eurofxref.zip')
 print(cc.convert(1,'USD','KRW'))
+
+print("=====================================")
 
 def get_exchange_rate():
     headers = {

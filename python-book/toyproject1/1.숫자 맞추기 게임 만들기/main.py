@@ -13,6 +13,8 @@ print(random.randrange(10))
 # random.choice(type) type에는 문자열, 리스트, 튜플 , range의 값을 입력받을 수 있고 무작위로 하나의 원소 반환
 print(random.choice([1,2,3,4,5]))
 
+print("=====================================")
+
 random_number = random.randint(1, 100)
 #print(random_number)
 

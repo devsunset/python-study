@@ -24,6 +24,8 @@ sent = round(net.bytes_sent/1024**2, 1)
 recv = round(net.bytes_recv/1024**2, 1)
 print(f'보내기: {sent}MB   받기: {recv}MB')
 
+print("=====================================")
+
 curr_sent = 0
 curr_recv = 0
 
