@@ -26,6 +26,22 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4
 
 --------------------------------------------------------------------------------
 
+--- Python Framework & Library ---
+
+---Web
+https://www.djangoproject.com/
+https://docs.djangoproject.com/ko/3.0/intro/
+
+https://flask.palletsprojects.com/en/1.1.x/
+https://flask-docs-kr.readthedocs.io/ko/latest/
+
+https://matplotlib.org/index.html
+https://apscheduler.readthedocs.io/en/stable/
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/#
+https://docs.scrapy.org/en/latest/index.html
+
+--------------------------------------------------------------------------------
+
 --- Python Study ---
 
 [[Python Tutorials]]
@@ -42,33 +58,16 @@ https://wikidocs.net/book/2165
 
 --------------------------------------------------------------------------------
 
---- Python Framework & Library ---
+[[source]]
 
----Web
-https://www.djangoproject.com/
-https://docs.djangoproject.com/ko/3.0/intro/
-
-https://flask.palletsprojects.com/en/1.1.x/
-https://flask-docs-kr.readthedocs.io/ko/latest/
-
-https://matplotlib.org/index.html
-https://apscheduler.readthedocs.io/en/stable/
-https://www.crummy.com/software/BeautifulSoup/bs4/doc/#
-https://docs.scrapy.org/en/latest/index.html
-
------------------------------------------------------------------------------------------------
-
-[[Python Book]]
-
-1.만들면서 배우는 파이썬과 40개의 작품들 - toyproject1
+* 만들면서 배우는 파이썬과 40개의 작품들 - toyproject1
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/107490270
 
-2.일잘러의 비밀, 엑셀 대신 파이썬으로 업무 자동화하기 - toyproject2
+* 일잘러의 비밀, 엑셀 대신 파이썬으로 업무 자동화하기 - toyproject2
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/109003861
 
+* 파이썬 레시피
+https://github.com/moseskim/python-recipe-src
 
-.ipynb -> .py 로 변환
-pip install nbconvert
-jupyter nbconvert --to script main.ipynb
