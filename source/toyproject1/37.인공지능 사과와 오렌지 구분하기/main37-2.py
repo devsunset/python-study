@@ -3,10 +3,10 @@ from PIL import Image, ImageOps
 import numpy as np
 from glob import glob
 
-model_path = r"37.인공지능 사과와 오렌지 구분하기\converted_keras\keras_model.h5"
-labels_path = r"37.인공지능 사과와 오렌지 구분하기\converted_keras\labels.txt"
-img_list = glob(r'37.인공지능 사과와 오렌지 구분하기\검증용사진\*.jpg')
-img_list.extend(glob(r'37.인공지능 사과와 오렌지 구분하기\검증용사진\*.png'))
+model_path = r"converted_keras\keras_model.h5"
+labels_path = r"converted_keras\labels.txt"
+img_list = glob(r'검증용사진\*.jpg')
+img_list.extend(glob(r'검증용사진\*.png'))
 
 model = tensorflow.keras.models.load_model(model_path)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
