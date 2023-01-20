@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
+# pip install selenium
+# pip install webdriver-manager
 
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
@@ -15,17 +15,11 @@ driver.get(url=URL)
 driver.implicitly_wait(time_to_wait=10)
 
 
-# In[2]:
-
-
 from selenium.webdriver.common.keys import Keys
 
 elem = driver.find_element_by_css_selector("#sbtc > div > div.a4bIc > input")
 elem.send_keys("바다")
 elem.send_keys(Keys.RETURN)
-
-
-# In[5]:
 
 
 import time
@@ -44,10 +38,7 @@ except:
     pass
 
 
-# In[7]:
-
-
-links=[] 
+links=[]
 images = driver.find_elements_by_css_selector("#islrg > div.islrc > div > a.wXeWr.islib.nfEiy > div.bRMDJf.islir > img")
 
 for image in images:
@@ -57,14 +48,11 @@ for image in images:
 print(' 찾은 이미지 개수:',len(links))
 
 
-# In[22]:
-
-
 import urllib.request
 
 for k,i in enumerate(links):
     url = i
-    urllib.request.urlretrieve(url, "C:\\파이썬과 40개의 작품들\\19.구글 이미지 크롤링\\사진다운로드\\"+str(k)+".jpg")
+    urllib.request.urlretrieve(url, "사진다운로드\\"+str(k)+".jpg")
 
 print('다운로드 완료하였습니다.')
 

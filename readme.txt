@@ -67,3 +67,8 @@ http://www.yes24.com/Product/Goods/107490270
 2.일잘러의 비밀, 엑셀 대신 파이썬으로 업무 자동화하기 - toyproject2
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/109003861
+
+
+.ipynb -> .py 로 변환
+pip install nbconvert
+jupyter nbconvert --to script main.ipynb
