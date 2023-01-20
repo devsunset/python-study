@@ -1,7 +1,9 @@
 import pandas as pd
 from collections import Counter
 
-file_path = r'26.로또번호 시각화하기\lotto.xlsx'
+# 로또 당첨 번호 빈도수
+
+file_path = 'lotto.xlsx'
 df_from_excel = pd.read_excel(file_path,engine='openpyxl')
 
 df_from_excel = df_from_excel.drop(index=[0,1])

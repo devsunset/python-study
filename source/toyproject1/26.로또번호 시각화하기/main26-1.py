@@ -1,6 +1,9 @@
+# pip install openpyxl
 import pandas as pd
 
-file_path = r'26.로또번호 시각화하기\lotto.xlsx'
+# 로또 당첨 번호 엑셀 파일 읽어 판단스로 담기
+
+file_path = 'lotto.xlsx'
 df_from_excel = pd.read_excel(file_path,engine='openpyxl')
 
 df_from_excel = df_from_excel.drop(index=[0,1])

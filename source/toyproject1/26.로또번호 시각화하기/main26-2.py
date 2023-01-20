@@ -2,7 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
 
-file_path = r'26.로또번호 시각화하기\lotto.xlsx'
+# 판단스로 값 읽고 그래프로 출력
+
+file_path = 'lotto.xlsx'
 df_from_excel = pd.read_excel(file_path,engine='openpyxl')
 
 df_from_excel = df_from_excel.drop(index=[0,1])
@@ -29,9 +31,9 @@ df_from_excel["5등당첨금액"] = pd.to_numeric(df_from_excel["5등당첨금�
 
 print( df_from_excel[['1등당첨금액','2등당첨금액','3등당첨금액','4등당첨금액','5등당첨금액']] )
 
-font_path = "C:/Windows/Fonts/NGULIM.TTF"
-font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font)
+# font_path = "C:/Windows/Fonts/NGULIM.TTF"
+# font = font_manager.FontProperties(fname=font_path).get_name()
+# rc('font', family=font)
 
 x = df_from_excel['회차'].iloc[:100].values
 price = df_from_excel['1등당첨금액'].iloc[:100].values / 100000000
