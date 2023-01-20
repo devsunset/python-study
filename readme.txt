@@ -71,3 +71,13 @@ http://www.yes24.com/Product/Goods/109003861
 * 파이썬 레시피
 https://github.com/moseskim/python-recipe-src
 
+--------------------------------------------------------------------------------
+
+* ipynb -> py
+pip install nbconvert
+jupyter nbconvert --to script main.ipynb
+
+* exe
+pip install pyinstaller
+pyinstaller -w -F 파일이름.py
+
