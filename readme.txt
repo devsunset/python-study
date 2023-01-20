@@ -60,11 +60,11 @@ https://wikidocs.net/book/2165
 
 [[source]]
 
-* 만들면서 배우는 파이썬과 40개의 작품들 - toyproject1
+* 만들면서 배우는 파이썬과 40개의 작품들
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/107490270
 
-* 일잘러의 비밀, 엑셀 대신 파이썬으로 업무 자동화하기 - toyproject2
+* 일잘러의 비밀, 엑셀 대신 파이썬으로 업무 자동화하기
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/109003861
 
