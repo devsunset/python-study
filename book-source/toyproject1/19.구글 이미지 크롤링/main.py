@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # pip install selenium
 # pip install webdriver-manager
 
