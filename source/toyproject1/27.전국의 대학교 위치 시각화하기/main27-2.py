@@ -1,4 +1,10 @@
+# pip install folium
+# pip install openpyxl
+# https://kess.kedi.re.kr/inedx
+# https://www.vworld.kr/dev/v4dv_geocoderguide2_s001.do
 import requests
+
+# 오픈 API를 이용해 주소를 좌표로 변환 처리
 
 url = 'http://api.vworld.kr/req/address?'
 params = 'service=address&request=getcoord&version=2.0&crs=epsg:4326&refine=true&simple=false&format=json&type='

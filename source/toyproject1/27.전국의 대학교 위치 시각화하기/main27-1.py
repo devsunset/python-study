@@ -1,6 +1,12 @@
+# pip install folium
+# pip install openpyxl
+# https://kess.kedi.re.kr/inedx
+# https://www.vworld.kr/dev/v4dv_geocoderguide2_s001.do
 import pandas as pd
 
-filePath = r'27.전국의 대학교 위치 시각화하기\고등교육기관 하반기 주소록(2020).xlsx'
+# 판다스에서 학교명과 주소 찾는 처리
+
+filePath = '고등교육기관 하반기 주소록(2020).xlsx'
 df_from_excel = pd.read_excel(filePath,engine='openpyxl')
 
 df_from_excel.columns = df_from_excel.loc[4].tolist()

@@ -1,7 +1,11 @@
+# pip install folium
+# pip install openpyxl
+# https://kess.kedi.re.kr/inedx
+# https://www.vworld.kr/dev/v4dv_geocoderguide2_s001.do
 import pandas as pd
 import folium
 
-filePath = r'27.전국의 대학교 위치 시각화하기\학교주소좌표.xlsx'
+filePath = '학교주소좌표.xlsx'
 df_from_excel = pd.read_excel(filePath,engine='openpyxl',header=None)
 
 df_from_excel.columns = ['학교이름','주소','x','y']
@@ -20,4 +24,4 @@ for i in range(len(name_list)):
                             icon = folium.Icon(color='blue'))
         marker.add_to(map) 
 
-map.save(r'27.전국의 대학교 위치 시각화하기/uni_map.html')
+map.save('uni_map.html')

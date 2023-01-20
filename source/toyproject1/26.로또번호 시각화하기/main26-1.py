@@ -1,4 +1,5 @@
 # pip install openpyxl
+# https://www.dhlottery.co.kr
 import pandas as pd
 
 # 로또 당첨 번호 엑셀 파일 읽어 판단스로 담기

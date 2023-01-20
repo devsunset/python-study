@@ -1,11 +1,17 @@
+# pip install folium
+# pip install openpyxl
+# https://kess.kedi.re.kr/inedx
+# https://www.vworld.kr/dev/v4dv_geocoderguide2_s001.do
+
 import pandas as pd
 import requests
 from openpyxl import load_workbook
 from openpyxl import Workbook
 import re
 
+# 오픈 API를 이용해 주소를 좌표로 변환 처리
 
-filePath = r'27.전국의 대학교 위치 시각화하기\고등교육기관 하반기 주소록(2020).xlsx'
+filePath = '고등교육기관 하반기 주소록(2020).xlsx'
 df_from_excel = pd.read_excel(filePath,engine='openpyxl')
 df_from_excel.columns = df_from_excel.loc[4].tolist()
 df_from_excel = df_from_excel.drop(index=list(range(0,5)))
@@ -33,7 +39,7 @@ def request_geo(road):
 
 
 try:
-    wb = load_workbook(r"27.전국의 대학교 위치 시각화하기\학교주소좌표.xlsx", data_only=True)
+    wb = load_workbook("학교주소좌표.xlsx", data_only=True)
     sheet  = wb.active
 except:
     wb = Workbook()
@@ -48,4 +54,4 @@ for num,value in enumerate(address_list):
     x,y = request_geo(addr)
     sheet.append([university_list[num],addr,x,y])
 
-wb.save(r"27.전국의 대학교 위치 시각화하기\학교주소좌표.xlsx")
+wb.save("학교주소좌표.xlsx")
