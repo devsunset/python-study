@@ -21,8 +21,8 @@ while True:
                 if message not in send_message_list:
                     print(message)
                     send_message_list.append(message)
-                    token = "2147448681:AAF54C5_5U7nKqwKvwnbI9n4Dr6m5GmicbY"
-                    id = "730238165"
+                    token = "token"
+                    id = "bot_id"
                     bot = telegram.Bot(token)
                     bot.sendMessage(chat_id=id, text=message)
                     
