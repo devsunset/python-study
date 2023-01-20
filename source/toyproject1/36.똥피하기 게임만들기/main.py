@@ -1,3 +1,4 @@
+# pip install pygame
 import pygame, sys
 from pygame.locals import *
 import random
@@ -27,8 +28,27 @@ class Player():
             if self.x > 0:
                 self.x -= 5
 
+class Enemy():
+    def __init__(self):
+        self.x = random.randrange(0, MAX_WIDTH-40)
+        self.y = 50
+        self.speed = random.randrange(10, 20)
+        self.enemy = pygame.image.load('똥.png')
+        self.enemy = pygame.transform.scale(self.enemy,(40,40))
+        
+    def draw(self):
+        return screen.blit(self.enemy, (self.x, self.y))
+    
+    def move(self):
+        self.y = self.y + self.speed
+        if self.y >= MAX_HEIGHT:
+            self.y = 50
+            self.x = random.randrange(0, MAX_WIDTH-40)
+            self.speed = random.randrange(7, 15)
+
 
 player = Player(MAX_WIDTH/2, MAX_HEIGHT - 40)
+enemy = Enemy()
 
 def main():
     while True:
@@ -43,6 +63,14 @@ def main():
         pressed_keys = pygame.key.get_pressed()
         player_rect = player.draw()
         player.move()
+        
+        enemy_rect = enemy.draw()
+        enemy.move()
+        
+        if player_rect.colliderect(enemy_rect):
+            print("충돌")
+            pygame.quit()
+            sys.exit()
         
         pygame.display.update()
 
