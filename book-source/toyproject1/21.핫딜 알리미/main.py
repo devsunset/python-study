@@ -25,7 +25,7 @@ while True:
                     id = "bot_id"
                     bot = telegram.Bot(token)
                     bot.sendMessage(chat_id=id, text=message)
-                    
+
         time.sleep(60.0 * 5)
         
     except KeyboardInterrupt:
