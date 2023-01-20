@@ -1,10 +1,26 @@
+# pip install python-telegram-bot
 import telegram
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, Filters
 
-token = "2147448681:AAF54C5_5U7nKqwKvwnbI9n4Dr6m5GmicbY"
-id = "730238165"
+# token값은 telegram 에서 bot 생성시 확인
+token = "token"
 
+# bot id 확인
+# bot = telegram.Bot(token=token)
+# updates = bot.getUpdates()
+# for u in updates:
+#     print(u.message)
+
+id = "bot_id"
+
+# 메시지 보내기
+# id = "bot_id"
+# bot = telegram.Bot(token)
+# bot.sendMessage(chat_id=id, text="hello world")
+
+
+# 자동 응답 예제
 bot = telegram.Bot(token)
 bot.sendMessage(chat_id=id, text="자동응답 테스트 입니다. 안녕 또는 뭐해 를 입력하여 보세요")
 
