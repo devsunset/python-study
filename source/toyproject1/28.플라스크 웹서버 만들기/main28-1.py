@@ -1,3 +1,6 @@
+# https://flask.palletsprojects.com
+# pip install flask
+# sudo python main28-1.py
 from flask import Flask
 
 app = Flask(__name__)

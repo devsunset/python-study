@@ -1,3 +1,6 @@
+# https://flask.palletsprojects.com
+# pip install flask
+# sudo python main28-3.py
 from flask import Flask, render_template
 
 app = Flask(__name__)
