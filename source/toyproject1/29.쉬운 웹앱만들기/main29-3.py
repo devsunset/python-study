@@ -1,3 +1,7 @@
+# pip install streamlit
+# pip install pyupbit
+# https://streamlit.io
+# streamlit run main29-3.py
 import streamlit as st
 import datetime
 import pyupbit
