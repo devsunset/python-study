@@ -1,3 +1,5 @@
+# pip install torch==1.9.0
+# pip install torchvision=0.10.0
 from glob import glob
 
 img_path = '원본이미지'
