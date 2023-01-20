@@ -5,6 +5,8 @@
 import pandas as pd
 import folium
 
+# 자료의 모든 대학교 주소에 마커 표시 처리
+
 filePath = '학교주소좌표.xlsx'
 df_from_excel = pd.read_excel(filePath,engine='openpyxl',header=None)
 
