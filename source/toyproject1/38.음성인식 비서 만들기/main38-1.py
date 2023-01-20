@@ -1,3 +1,6 @@
+# pip install SpeechRecognition
+# conda install pyaudio -y
+# pip install playsound==1.2.2
 import pyaudio
 import wave
 from playsound import playsound
@@ -7,7 +10,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 44100
 RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = r"38.음성인식 비서 만들기\output.wav"
+WAVE_OUTPUT_FILENAME = "output.wav"
 
 p = pyaudio.PyAudio()
 

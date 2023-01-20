@@ -1,3 +1,6 @@
+# pip install SpeechRecognition
+# conda install pyaudio -y
+# pip install playsound==1.2.2
 import speech_recognition as sr
 
 try:
