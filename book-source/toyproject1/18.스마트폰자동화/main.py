@@ -1,6 +1,8 @@
 # pip install pure-python-adb
 # adb 설치
 # platform-tools/ ./adb start-server
+# https://developer.android.com/reference/android/view/KeyEvent
+
 from ppadb.client import Client
 import time
 
