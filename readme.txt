@@ -68,6 +68,9 @@ http://www.yes24.com/Product/Goods/107490270
 http://answerbook.co.kr/
 http://www.yes24.com/Product/Goods/109003861
 
+* 파이썬 라이브러리
+https://github.com/pahkey/pylib
+
 * 파이썬 레시피
 https://github.com/moseskim/python-recipe-src
 
