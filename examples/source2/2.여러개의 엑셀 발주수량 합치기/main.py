@@ -1,7 +1,8 @@
 import glob
 from openpyxl import load_workbook
+import pandas as pd
 
-발주서들 = glob.glob(r'2.여러개의 엑셀 발주수량 합치기\발주서_*.xlsx')
+발주서들 = glob.glob('발주서_*.xlsx')
 print(발주서들)
 
 발주처_list =[]
@@ -23,3 +24,12 @@ for 발주서 in 발주서들:
 print("발주처:",발주처_list)
 print("물품:",물품_list)
 print("수량:",수량_list)
+
+
+df = pd.DataFrame({ '물품' :  물품_list,
+                    '수량' :  수량_list
+                    })
+
+df = df.groupby('물품').sum()
+
+df.to_excel('통합.xlsx')
