@@ -5,7 +5,7 @@ from openpyxl import load_workbook
 from docx2pdf import convert
 
 #엑셀에서 읽기
-excel_path = r"3.수료증 자동생성 후 PDF 변환\수료명단.xlsx"
+excel_path = "수료명단.xlsx"
 
 wb = load_workbook(excel_path, data_only=True)
 ws = wb.active
@@ -23,7 +23,7 @@ print("생일:",birthday_list)
 print("호  :",ho_list)
 
 #워드로 쓰기
-doc = Document(r'3.수료증 자동생성 후 PDF 변환\수료증양식.docx')
+doc = Document('수료증양식.docx')
 
 for i in range(len(name_list)):
     doc.paragraphs[3].clear()
@@ -47,6 +47,5 @@ for i in range(len(name_list)):
     run._element.rPr.rFonts.set(qn('w:eastAsia'), '나눔고딕')
     run.font.size = docx.shared.Pt(18)
 
-    doc.save('3.수료증 자동생성 후 PDF 변환\\'+ ho_list[i] + name_list[i] + '.docx')
-    convert('3.수료증 자동생성 후 PDF 변환\\'+ ho_list[i] + name_list[i] + '.docx',
-            '3.수료증 자동생성 후 PDF 변환\\'+ ho_list[i] + name_list[i] + '.pdf')
+    doc.save(ho_list[i] + name_list[i] + '.docx')
+    convert(ho_list[i] + name_list[i] + '.docx', ho_list[i] + name_list[i] + '.pdf')
