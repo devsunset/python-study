@@ -1,6 +1,6 @@
 from openpyxl import load_workbook
 
-견적서_파일경로 = r"4.견적서에서 거래명세서 자동생성 후 PDF 변환\견적서_샘플.xlsx"
+견적서_파일경로 = "견적서_샘플.xlsx"
 
 견적서_wb = load_workbook(견적서_파일경로, data_only=True)
 견적서_ws = 견적서_wb.active
@@ -44,7 +44,7 @@ print("금액:",금액_list)
 
 from datetime import date
 
-거래명세표_파일경로 = r"4.견적서에서 거래명세서 자동생성 후 PDF 변환\거래명세표_샘플.xlsx"
+거래명세표_파일경로 = "거래명세표_샘플.xlsx"
 
 거래명세표_wb = load_workbook(거래명세표_파일경로, data_only=False)
 거래명세표_ws = 거래명세표_wb.active
@@ -61,4 +61,22 @@ for i in range(len(품목명_list)):
     거래명세표_ws.cell(row=i+10, column=ord('G')-64).value = 수량_list[i]
     거래명세표_ws.cell(row=i+10, column=ord('I')-64).value = 단가_list[i]
 
-거래명세표_wb.save("4.견적서에서 거래명세서 자동생성 후 PDF 변환\\" + "거래명세표_" + 견적받는자 +".xlsx")
+거래명세표_wb.save("거래명세표_" + 견적받는자 +".xlsx")
+
+
+import win32com.client
+import os
+
+excel = win32com.client.Dispatch("Excel.Application")
+
+load_file_path = "거래명세표_땡땡초등학교.xlsx"
+
+wb = excel.Workbooks.Open(load_file_path)
+ws_sheet = wb.ActiveSheet
+ws_sheet.Select()
+
+save_path = os.path.splitext(load_file_path)[0] + '.pdf'
+wb.ActiveSheet.ExportAsFixedFormat(0, save_path)
+
+wb.Close(False)
+excel.Quit()
