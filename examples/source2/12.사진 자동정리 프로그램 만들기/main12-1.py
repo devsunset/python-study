@@ -20,6 +20,5 @@ for tag, value in info.items():
     taglabel[decoded] = value
 
 print("사진정보: ",taglabel)
-
 print("사진촬영날짜: ",taglabel['DateTime'])
 print("사진촬영장소: ",taglabel['GPSInfo'])
