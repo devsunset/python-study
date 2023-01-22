@@ -1,1 +1,0 @@
-C:/Users/janghome/anaconda3/python.exe "c:/일잘러 파이썬과 40개의 작품들 코드/10.파일 자동백업프로그램 만들기/main10-3.py"
