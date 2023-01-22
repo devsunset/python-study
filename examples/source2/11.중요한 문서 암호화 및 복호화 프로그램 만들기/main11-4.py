@@ -2,13 +2,17 @@ import tkinter
 from tkinter import *
 import cryptocode
 
-#암호화 버튼 클릭시 동작하는 함수
 def btn_encrypt_click():
     print("암호화 버튼 클릭")
+    암호화된_문자열 = cryptocode.encrypt(text_area.get(1.0,tkinter.END),entry_password.get())
+    text_area.delete(1.0,tkinter.END)
+    text_area.insert(1.0,암호화된_문자열) 
 
-#복호화 버튼 클릭시 동작하는 함수
 def btn_decrypt_click():
     print("복호화 버튼 클릭")
+    복호화된_문자열 = cryptocode.decrypt(text_area.get(1.0,tkinter.END),entry_password.get())
+    text_area.delete(1.0,tkinter.END) 
+    text_area.insert(1.0,복호화된_문자열)
 
 #tkinter 윈도우설정
 window=tkinter.Tk()
@@ -16,7 +20,7 @@ window.title("암호화 및 복호화")
 window.geometry("320x400+800+300")
 window.resizable(False, False)
 
-#글자표시
+#라벨
 lb_text = Label(window,width=10,text="비밀번호:")
 lb_text.grid(row=0, column=0)
 
