@@ -42,4 +42,4 @@ for description in description_list:
 
 wc = WordCloud(font_path="NanumGothic", width=400, height=400, scale=2.0, max_font_size=250)
 gen = wc.generate_from_frequencies(명사_빈도수_list)
-wc.to_file(r'17.뉴스기사의 형태소를 분석하여 워드 클라우드 생성\뉴스_워드클라우드.png')
+wc.to_file('뉴스_워드클라우드.png')
