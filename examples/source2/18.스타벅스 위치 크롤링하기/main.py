@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 
@@ -15,8 +9,6 @@ driver.get(url=URL)
 driver.implicitly_wait(time_to_wait=10)
 
 
-# In[12]:
-
 
 from selenium.webdriver.common.by import By
 import time
@@ -26,8 +18,6 @@ location_search = driver.find_element(By.CSS_SELECTOR,"#container > div > form >
 location_search.click()
 
 
-# In[14]:
-
 
 #시/도를 모두 찾아 출력
 location_list = driver.find_elements(By.CSS_SELECTOR,"#container > div > form > fieldset > div > section > article.find_store_cont > article > article > div.loca_step1 > div.loca_step1_cont > ul > li > a")
@@ -35,14 +25,9 @@ for location in location_list:
     print(location.text,end=",")
 
 
-# In[15]:
-
 
 #전체 클릭
 driver.find_element(By.CSS_SELECTOR,"#mCSB_2_container > ul > li:nth-child(1) > a").click()
-
-
-# In[16]:
 
 
 #지역에서 데이터수집하여 출력
@@ -58,9 +43,6 @@ for 매장 in 매장_list:
 print(data_name_list[0:10])
 print(data_lat_list[0:10])
 print(data_long_list[0:10])
-
-
-# In[18]:
 
 
 #1.시/도 클릭 -> 2.전체 클릭 -> 3.데이터수집 -> 4.지역검색 버튼을 눌러 시/도로 이동
@@ -102,8 +84,6 @@ for location in location_list:
     location_search.click()
     time.sleep(3.0)
 
-
-# In[23]:
 
 
 import pandas as pd
