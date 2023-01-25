@@ -1,7 +1,7 @@
 import pandas as pd
 import folium
 
-filePath = r'18.스타벅스 위치 크롤링하기\스타벅스위치.xlsx'
+filePath = '스타벅스위치.xlsx'
 df_from_excel = pd.read_excel(filePath)
 
 name_list = df_from_excel['이름'].to_list()
@@ -23,4 +23,4 @@ for i in range(len(name_list)):
                                 icon = folium.Icon(color='blue'))
     marker.add_to(map) 
 
-map.save(r'19.스타벅스 위치 지도에 표시하기/star_map.html')
+map.save('star_map.html')

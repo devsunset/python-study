@@ -1,7 +1,7 @@
 import pandas as pd
 import folium
 
-filePath = r'20.스타벅스 이디야 메가커피 위치 지도에 표시하기\스타벅스_이디야_메가커피_위치.xlsx'
+filePath = '스타벅스_이디야_메가커피_위치.xlsx'
 df_from_excel = pd.read_excel(filePath)
 
 매장_list = df_from_excel['매장'].to_list()
@@ -30,4 +30,4 @@ for i in range(len(매장_list)):
                                 icon = folium.Icon(color='orange'))
     marker.add_to(map) 
 
-map.save(r'20.스타벅스 이디야 메가커피 위치 지도에 표시하기/매장위치.html')
+map.save('매장위치.html')
