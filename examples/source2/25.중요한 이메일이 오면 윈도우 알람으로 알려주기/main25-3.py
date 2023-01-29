@@ -6,8 +6,8 @@ from win10toast import ToastNotifier
 toaster = ToastNotifier()
 
 imap = imaplib.IMAP4_SSL('imap.naver.com')
-id = 'munjjac'
-pw = 'mini0414~!@'
+id = ''
+pw = ''
 imap.login(id, pw)
 
 send_list = []

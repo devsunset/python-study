@@ -35,8 +35,8 @@ def send_naver_google_email(naver_or_google,send_email,send_pwd,recv_email,subje
     except:
         return recv_email + " 메일보내는데 실패하였습니다."
 
-send_email = "munjjac@naver.com"
-send_pwd = "mini0414~!@"
+send_email = ""
+send_pwd = ""
 
 for i in range(len(name_list)):
     recv_email = email_list[i]

@@ -26,9 +26,9 @@ def send_naver_google_email(naver_or_google,send_email,send_pwd,recv_email,subje
     except:
         return recv_email + " 메일보내는데 실패하였습니다."
 
-send_email = "munjjac@naver.com"
-send_pwd = "mini0414~!@"
-recv_email = "munjjac@hanmail.net"
+send_email = ""
+send_pwd = ""
+recv_email = ""
 subject = "메일 제목 입니다.22"
 text = """ 메일 내용을 입력합니다.
 여러줄 입력하여도 됩니다.
