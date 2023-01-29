@@ -55,6 +55,6 @@ draw=ImageDraw.Draw(empty_im)
 draw.text((300,300)
           ,text
           ,font=ImageFont.truetype("NanumGothic", 60)
-          ,fill=(0,0,0)) 
+          ,fill=(0,0,0))
 
 empty_im.save(f"{근로자이름}.png")
