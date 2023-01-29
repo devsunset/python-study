@@ -3,7 +3,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 from rembg import remove
 
-input_path = 'img2.jpg'
+input_path = 'image.jpg'
 output_path = "out_" + input_path
 
 with open(input_path, 'rb') as i:
