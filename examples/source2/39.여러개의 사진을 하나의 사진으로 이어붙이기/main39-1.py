@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-img1_path = r'39.여러개의 사진을 하나의 사진으로 이어붙이기\원본이미지\가로1.jpg'
-img2_path = r'39.여러개의 사진을 하나의 사진으로 이어붙이기\원본이미지\가로2.jpg'
+img1_path = 'image1.jpg'
+img2_path = 'image2.jpg'
 
 #이미지 읽기
 img1_read = np.fromfile(img1_path, np.uint8)

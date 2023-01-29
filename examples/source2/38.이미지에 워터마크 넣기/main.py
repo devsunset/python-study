@@ -1,7 +1,7 @@
 from PIL import  Image, ImageDraw, ImageFont
 
 #이미지 불러오기 및 이미지사이즈 획득
-image = Image.open(r'38.이미지에 워터마크 넣기\원본이미지\사진 (1).jpg')
+image = Image.open('original.jpg')
 width, height = image.size
 
 #이미지 그리기
