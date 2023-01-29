@@ -1,7 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
+import schedule
+import time
 
-LINE_TOKEN = 'ypVP5seUvHQe67QcZWaqLImYcs3OP4SIkzLTTKGUh8X'
+
+LINE_TOKEN = ''
 
 def send_line_message(token,message):
     try:
@@ -10,12 +13,9 @@ def send_line_message(token,message):
         data = {'message' : message}
         
         response = requests.post(TARGET_URL,headers=headers,data=data)
-        if response.status_code == 200:
-            return "전송 성공"
-        else:
-            return "전송 실패"
+        return "성공"
     except:
-        return "에러"
+        return "실패"
 
 def get_kospi_kosdaq_now():
     url = 'https://finance.naver.com/sise/'
@@ -29,7 +29,17 @@ def get_kospi_kosdaq_now():
     else : 
         return "에러"
 
-kospi_now, kosdaq_now = get_kospi_kosdaq_now()
-send_message = "코스피: " + kospi_now + " 코스닥: " + kosdaq_now
+def send_mesaage():
+    kospi_now, kosdaq_now = get_kospi_kosdaq_now()
+    send_message = "코스피: " + kospi_now + " 코스닥: " + kosdaq_now
+    print(send_line_message(LINE_TOKEN,send_message))
 
-print(send_line_message(LINE_TOKEN,send_message))
+schedule.every().monday.at("09:10").do(send_mesaage)
+schedule.every().tuesday.at("09:10").do(send_mesaage)
+schedule.every().wednesday.at("09:10").do(send_mesaage)
+schedule.every().thursday.at("15:13").do(send_mesaage)
+schedule.every().friday.at("09:10").do(send_mesaage)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1.0)
