@@ -3,6 +3,14 @@ from tkinter import *
 import tkinter.ttk
 import os
 
+
+#컴퓨터 끄기
+# os.system('shutdown -s -t 3600')
+# time.sleep(5.0)
+#
+# #취소
+# os.system('shutdown -a')
+
 #실행 버튼 누르면 동작하는 함수
 def btn_action():
     os.system('shutdown -a') 
@@ -17,7 +25,7 @@ def btn_cancer():
 
 window=tkinter.Tk()
 window.title("컴퓨터 전원끄기")
-window.geometry("200x150+600+200")
+window.geometry("200x200+600+200")
 window.resizable(False, False)
 
 lb_huor = Label(window,width=10,text="시간:")
