@@ -18,6 +18,6 @@ def send_slack_webhook(webhook_url,strText):
     else:
         return "error"
 
-slack_webhook_url = "https://hooks.slack.com/services/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"
+slack_webhook_url = "https://hooks.slack.com/services/"
 
-print(send_slack_webhook(slack_webhook_url,"SSS급 일잘러를 위한 파이썬과 40개의 작품들 입니다."))
+print(send_slack_webhook(slack_webhook_url,"slack message send test"))

@@ -6,7 +6,7 @@ import json
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-slack_webhook_url = "https://hooks.slack.com/services/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"
+slack_webhook_url = "https://hooks.slack.com/services/"
 
 def send_slack_webhook(webhook_url,strText):
     headers = {
