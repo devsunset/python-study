@@ -53,21 +53,21 @@ print("Hello World")
 
     pip install virtualenv
 
-    python -m venv C:\dev\python-work\venv\
+    python -m venv C:\dev\python-study\venv\
 
-    C:\dev\python-work\venv\Scripts\activate.bat
+    C:\dev\python-study\venv\Scripts\activate.bat
 
-    C:\dev\python-work\venv\Scripts\python -m pip install --upgrade pip
+    C:\dev\python-study\venv\Scripts\python -m pip install --upgrade pip
 
-    C:\dev\python-work\venv\Scripts\pip install django
+    C:\dev\python-study\venv\Scripts\pip install django
 
-    C:\dev\python-work\  C:\dev\python-work\venv\Scripts\django-admin.exe startproject www
+    C:\dev\python-study\  C:\dev\python-study\venv\Scripts\django-admin.exe startproject www
 
     # defalt port 8000
-    C:\dev\python-work\www> C:\dev\python-work\venv\Scripts\python.exe .\manage.py runserver
+    C:\dev\python-study\www> C:\dev\python-study\venv\Scripts\python.exe .\manage.py runserver
 
     # port 8080
-    C:\dev\python-work\www> C:\dev\python-work\venv\Scripts\python.exe .\manage.py runserver 8080
+    C:\dev\python-study\www> C:\dev\python-study\venv\Scripts\python.exe .\manage.py runserver 8080
 '''
 
 # -----------------------------------------

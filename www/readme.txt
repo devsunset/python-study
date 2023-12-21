@@ -8,30 +8,30 @@
 
     # pip install virtualenv
 
-    # python -m venv C:\dev\python-work\venv\
+    # python -m venv C:\dev\python-study\venv\
 
-    # C:\dev\python-work\venv\Scripts\activate.bat
+    # C:\dev\python-study\venv\Scripts\activate.bat
 
-    # (venv) C:\dev\python-work\venv\Scripts\python -m pip install --upgrade pip
+    # (venv) C:\dev\python-study\venv\Scripts\python -m pip install --upgrade pip
 
-    # (venv) C:\dev\python-work\venv\Scripts\pip install django
+    # (venv) C:\dev\python-study\venv\Scripts\pip install django
 
-    # (venv) C:\dev\python-work\  C:\dev\python-work\venv\Scripts\django-admin.exe startproject www
+    # (venv) C:\dev\python-study\  C:\dev\python-study\venv\Scripts\django-admin.exe startproject www
 
     # defalt port 8000
-    (venv) C:\dev\python-work\www> C:\dev\python-work\venv\Scripts\python.exe .\manage.py runserver
+    (venv) C:\dev\python-study\www> C:\dev\python-study\venv\Scripts\python.exe .\manage.py runserver
 
     # external access && port 8080
-    (venv) C:\dev\python-work\www> C:\dev\python-work\venv\Scripts\python.exe .\manage.py runserver 0.0.0.0:8080
+    (venv) C:\dev\python-study\www> C:\dev\python-study\venv\Scripts\python.exe .\manage.py runserver 0.0.0.0:8080
 
     ------------------------------------------------------------------------------------------------------
 
     # Create Django App
-        (venv) C:\dev\python-work\www\manage.py startapp home
+        (venv) C:\dev\python-study\www\manage.py startapp home
 
         - Error
         ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
-        C:\dev\python-work\venv\Scripts\activate.bat
+        C:\dev\python-study\venv\Scripts\activate.bat
 
         1) home/views.py file add
 
@@ -147,11 +147,11 @@
     models.py
 
     # DB Migration
-    (venv) C:\dev\python-work\www\manage.py makemigrations
+    (venv) C:\dev\python-study\www\manage.py makemigrations
 
-    (venv) C:\dev\python-work\www\manage.py migrate
+    (venv) C:\dev\python-study\www\manage.py migrate
 
-    (venv) C:\dev\python-work\www\manage.py dbshell
+    (venv) C:\dev\python-study\www\manage.py dbshell
 
     - Error
     CommandError: You appear not to have the 'sqlite3' program installed or on your path.    
@@ -232,12 +232,12 @@
 
     STATIC_ROOT = '/var/www/myweb_static'
 
-    C:\dev\python-work\www\manage.py collectstatic
+    C:\dev\python-study\www\manage.py collectstatic
 
 
     # createsuperuser
     
-    C:\dev\python-work\www\manage.py createsuperuser
+    C:\dev\python-study\www\manage.py createsuperuser
 
     admin.py add
 
@@ -257,7 +257,7 @@
 
     # Django Debugging    
 
-       (venv) C:\dev\python-work\venv\Scripts\pip install django-debug-toolbar
+       (venv) C:\dev\python-study\venv\Scripts\pip install django-debug-toolbar
 
         - settings.py add
 
@@ -306,7 +306,7 @@
             path('__debug__/', include(debug_toolbar.urls)),
         ]
 
-        (venv) C:\dev\python-work\www> C:\dev\python-work\venv\Scripts\python.exe .\manage.py runserver
+        (venv) C:\dev\python-study\www> C:\dev\python-study\venv\Scripts\python.exe .\manage.py runserver
 
     ------------------------------------------------------------------------------------------------------
     
